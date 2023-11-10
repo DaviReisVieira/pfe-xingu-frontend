@@ -1,0 +1,33 @@
+.dataTable {
+    font-family: Arial, sans-serif;
+    width: 100%;
+  }
+  
+  .dataTable table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .dataTable table, .dataTable th, .dataTable td {
+    border: 1px solid var(--grey-blue);
+  }
+  
+  .dataTable th, .dataTable td {
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .dataTable th {
+    color: var(--white);
+    background-color: var(--vermelho-kamaiura);
+    font-weight: bold;
+  }
+  
+  .dataTable tr:nth-child(even) {
+    background-color: var(--grey-light);
+  }
+  
+  .dataTable tr:nth-child(odd) {
+    background-color: var(--white);
+  }
+  

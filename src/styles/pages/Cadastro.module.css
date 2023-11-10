@@ -1,0 +1,9 @@
+.container {
+    padding: 0px 100px;
+}
+
+.container h1 {
+    font-size: 3.6rem;
+    margin: 50px 0;
+    color: var(--vermelho-kamaiura);
+}

@@ -1,0 +1,82 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .container label {
+    margin: 5px 0;
+    font-weight: bold;
+  }
+  
+  .container input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 100%;
+  }
+  
+  .container select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 100%;
+  }
+  
+  .container button {
+    background-color: var(--vermelho-kamaiura);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .container button:hover {
+    background-color: var(--grey-dark);
+  }
+  
+  .popup {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    text-align: center;
+  }
+  
+  .confirmButton, .cancelButton {
+    background-color: var(--grey-blue);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .confirmButton:hover, .cancelButton:hover {
+    background-color: var(--grey-dark);
+  }
+
+  .buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    margin: 15px 0;
+  }
+  

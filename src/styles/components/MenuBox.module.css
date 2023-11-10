@@ -1,0 +1,47 @@
+.container {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 72px;
+    padding: 0px 100px;
+    background: var(--white);
+    top: 0px;
+    z-index: 9998;
+    transition: all 0.5s ease-in-out 0s;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0.5rem 1rem;
+    opacity: 1;
+    transform: translateY(0px);
+    visibility: visible;
+    justify-content: space-between;
+    place-items: center;
+  }
+
+  .container button{
+    padding: 10px 20px;
+  }
+
+  .links {
+    display: flex;
+    list-style: none;
+
+  }
+
+  .links li {
+    margin: 0px 30px;
+  }
+
+  .activeLi {
+    color: var(--blue-cp);
+  }
+
+  .inactiveLi {
+    color: var(--gray);
+    opacity: 0.8;
+  }
+
+  .inactiveLi:hover {
+    color: var(--blue-cp);
+  }
+  
+  @media (max-width: 720px) {
+  }

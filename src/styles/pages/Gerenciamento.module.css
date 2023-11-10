@@ -1,0 +1,38 @@
+.container {
+    margin: 120px 0;
+    padding: 0px 100px;
+}
+
+.container h1 {
+    font-size: 3.6rem;
+    margin: 50px 0;
+    color: var(--vermelho-kamaiura);
+}
+
+.container h2 {
+    color: var(--vermelho-kamaiura);
+    margin: 10px 0;
+}
+
+.tabs {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: var(--grey);
+    color: #fff;
+    border-radius: 4px;
+    margin-right: 10px;
+    transition: background-color 0.2s;
+  }
+  
+.tab.active {
+    background-color: var(--vermelho-kamaiura);
+}
+
+.tab:hover {
+    background-color: var(--grey-dark);
+}
