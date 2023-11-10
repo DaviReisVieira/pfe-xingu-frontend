@@ -32,34 +32,21 @@ const PDFViewer: React.FC<PDFViewerProps> = ({ id }: any) => {
 
 
 
-    const onDocumentLoadSuccess = ({ numPages }) => {
-        setNumPages(numPages);
-    };
+    // const onDocumentLoadSuccess = ({ numPages }) => {
+    //     setNumPages(numPages);
+    // };
 
-    const goToPrevPage = () =>
-        setPageNumber(pageNumber - 1 <= 1 ? 1 : pageNumber - 1);
+    // const goToPrevPage = () =>
+    //     setPageNumber(pageNumber - 1 <= 1 ? 1 : pageNumber - 1);
 
-    const goToNextPage = () =>
-        setPageNumber(
-            pageNumber + 1 >= numPages ? numPages : pageNumber + 1,
-        );
+    // const goToNextPage = () =>
+    //     setPageNumber(
+    //         pageNumber + 1 >= numPages ? numPages : pageNumber + 1,
+    //     );
 
     return (
         <div>
-            <nav>
-                <button onClick={goToPrevPage}>Prev</button>
-                <button onClick={goToNextPage}>Next</button>
-                <p>
-                    Page {pageNumber} of {numPages}
-                </p>
-            </nav>
-
-            <Document
-                file={pdfUrl}
-                onLoadSuccess={onDocumentLoadSuccess}
-            >
-                <Page pageNumber={pageNumber} />
-            </Document>
+            <p>Olá</p>
         </div>
     );
 };
