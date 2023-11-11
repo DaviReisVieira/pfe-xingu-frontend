@@ -35,12 +35,12 @@ export default function Dashboard() {
             <div className={styles.container}>
                 <h1>Baixar Itens</h1>
                 <ul className={styles.downloadList}>
-                    <li>
+                    {/* <li>
                         <h2>Certificado de Internet</h2>
                         <Image src="/images/internet.png" width={100} height={100} alt={"Android logotipo"} />
                         <p>Baixar o certificado de internet, importante para acessar o sistema.</p>
                         <button onClick={() => getItens('certificado')}>Download</button>
-                    </li>
+                    </li> */}
                     <li>
                         <h2>Conversa para IPhone</h2>
                         <Image src="/images/ios.png" width={100} height={100} alt={"iOS logotipo"} />
