@@ -33,7 +33,7 @@ export default function Dashboard() {
 
 
             <div className={styles.container}>
-                <h1>Baixar Itens</h1>
+                <h1>Lista de Downloads</h1>
                 <ul className={styles.downloadList}>
                     {/* <li>
                         <h2>Certificado de Internet</h2>
