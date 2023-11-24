@@ -16,56 +16,6 @@ export default function Sistema() {
   const [cpf, setCpf] = useState<string>("");
   const [password, setPassword] = useState<string>("");
 
-  const [ipAddress, setIpAddress] = useState<string>("");
-  const [latitude, setLatitude] = useState<number>(0);
-  const [longitude, setLongitude] = useState<number>(0);
-
-  var options = {
-    enableHighAccuracy: true,
-    timeout: 5000,
-    maximumAge: 0,
-  };
-
-  function success(pos: any) {
-    var crd = pos.coords;
-    setLatitude(crd.latitude);
-    setLongitude(crd.longitude);
-  }
-
-  function errors(err: any) {
-    console.warn(`ERROR(${err.code}): ${err.message}`);
-    setLatitude(-1);
-    setLongitude(-1);
-  }
-
-  useEffect(() => {
-    if (navigator.geolocation) {
-      navigator.permissions
-        .query({ name: "geolocation" })
-        .then(function (result) {
-          if (result.state === "granted") {
-            navigator.geolocation.getCurrentPosition(success, errors, options);
-          } else if (result.state === "prompt") {
-            navigator.geolocation.getCurrentPosition(success, errors, options);
-          } else if (result.state === "denied") {
-          }
-        });
-    } else {
-      console.log("Geolocation is not supported by this browser.");
-    }
-
-    const fetchIp = async () => {
-      try {
-        const response = await fetch("https://api.ipify.org?format=json");
-        const data = await response.json();
-        setIpAddress(data.ip);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-    fetchIp();
-  }, []);
-
 
   const isAuthenticated = false;
 
@@ -84,10 +34,7 @@ export default function Sistema() {
     try {
       const user = {
         cpf: cpf,
-        password: password,
-        ip_address: ipAddress,
-        latitude: latitude,
-        longitude: longitude,
+        password: password
       };
 
       const response: any = await signIn({ user });
@@ -98,12 +45,6 @@ export default function Sistema() {
     } catch (error) {
       setError(error);
     }
-  }
-
-  if (latitude == 0 || longitude == 0) {
-    return (
-      <LoadingBox />
-    )
   }
 
   return (

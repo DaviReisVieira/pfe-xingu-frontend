@@ -113,3 +113,11 @@ interface PrecatorioAtualizado {
     precatorio: CredorData & ProcessoData & CreditoData & PreferenciaData & CalculoData
 
 }
+
+interface DocumentProps {
+    id: string;
+    title: string;
+    description: string;
+    type: string;
+    url: string;
+}

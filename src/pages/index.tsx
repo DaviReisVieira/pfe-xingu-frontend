@@ -27,7 +27,7 @@ export default function Login() {
           </div>
           <h2>Seja bem-vindo(a)!</h2>
           <div className={styles.divContainer}>
-            <button onClick={clickSite('sistema')}>Sistema Kamaiurá</button>
+            {/* <button onClick={clickSite('sistema')}>Sistema Kamaiurá</button> */}
             <button onClick={clickSite('biblioteca')}>Biblioteca Digital</button>
             <button onClick={clickSite('downloads')}>Baixar Arquivos</button>
           </div>
